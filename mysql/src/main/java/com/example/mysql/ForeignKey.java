@@ -28,6 +28,17 @@ public class ForeignKey {
 	 * 
 	 * 		alter table transactions drop foreign key fk_customer_id;
 	 * 
+	 * 
+	 			=> set foreign_key_checks=1;
+	 			
+	 			this is by default 1 to make sure the parent row is not deleted before child row gets deleted
+	 			
+	 			
+	 			=> set foreign_key_checks=0;
+	 			
+	 			this makes the parent table delete a column even if it is present inside the other table as foreign key constraint
+	 			
+	 * 
 	 */
 
 }
